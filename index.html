@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+function showDateTime() {
+  document.write(new Date());
+}
+showDateTime();
+</script>
+<script>
+function greetUser(firstName, lastName) {
+  alert("Hello " + firstName + " " + lastName);
+}
+greetUser("Muneer", "Arif");
+</script>
+<script>
+function addNumbers() {
+  var num1 = +prompt("Enter first number");
+  var num2 = +prompt("Enter second number");
+  return num1 + num2;
+}
+alert("Sum is: " + addNumbers());
+</script>
+<script>
+function calculator(num1, num2, operator) {
+  if (operator === "+") return num1 + num2;
+  if (operator === "-") return num1 - num2;
+  if (operator === "*") return num1 * num2;
+  if (operator === "/") return num1 / num2;
+}
+
+document.write(calculator(10, 5, "+"));
+</script>
+<script>
+function square(num) {
+  return num * num;
+}
+document.write(square(5));
+</script>
+<script>
+function factorial(num) {
+  var fact = 1;
+  for (var i = 1; i <= num; i++) {
+    fact = fact * i;
+  }
+  return fact;
+}
+document.write(factorial(5));
+</script>
+<script>
+function counting(start, end) {
+  for (var i = start; i <= end; i++) {
+    document.write(i + "<br>");
+  }
+}
+counting(1, 10);
+</script>
+<script>
+function calculateHypotenuse(base, perpendicular) {
+
+  function calculateSquare(x) {
+    return x * x;
+  }
+
+  var hypotenuse = Math.sqrt(
+    calculateSquare(base) + calculateSquare(perpendicular)
+  );
+
+  return hypotenuse;
+}
+
+document.write(calculateHypotenuse(3, 4));
+</script>
+<script>
+function area(width, height) {
+  return width * height;
+}
+document.write(area(5, 10));
+</script>
+<script>
+var w = 6;
+var h = 8;
+document.write(area(w, h));
+</script>
+<script>
+function isPalindrome(str) {
+  var reversed = str.split("").reverse().join("");
+  return str === reversed;
+}
+document.write(isPalindrome("madam"));
+</script>
+<script>
+function titleCase(str) {
+  var words = str.split(" ");
+  for (var i = 0; i < words.length; i++) {
+    words[i] = words[i][0].toUpperCase() + words[i].slice(1);
+  }
+  return words.join(" ");
+}
+
+document.write(titleCase("the quick brown fox"));
+</script>
+<script>
+function longestWord(str) {
+  var words = str.split(" ");
+  var longest = "";
+
+  for (var i = 0; i < words.length; i++) {
+    if (words[i].length > longest.length) {
+      longest = words[i];
+    }
+  }
+  return longest;
+}
+
+document.write(longestWord("Web Development Tutorial"));
+</script>
+<script>
+function countLetter(str, letter) {
+  var count = 0;
+
+  for (var i = 0; i < str.length; i++) {
+    if (str[i] === letter) {
+      count++;
+    }
+  }
+  return count;
+}
+
+document.write(countLetter("JSResourceS.com", "o"));
+</script>
+
+    
+</body>
+<script src="appa.js"></script>
+</html>
